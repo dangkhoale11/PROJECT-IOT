@@ -1,0 +1,50 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "iot:Connect",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:client/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topicfilter/esp32/sub"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Receive",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/esp32/sub"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/esp32/pub"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/$aws/things/esp32-cam/shadow/update"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/$aws/things/esp32-cam/shadow/get"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/$aws/things/esp32-cam/shadow/update/delta"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/$aws/things/esp32-cam/shadow/get/accepted"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Publish",
+      "Resource": "arn:aws:iot:ap-southeast-2:135808927260:topic/esp32/sub"
+    }
+  ]
+}
