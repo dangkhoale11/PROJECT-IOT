@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "z9u66GU0lZ1_l27jD",
+        });
+    })();
+    </script>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <form id="signUp">
+        <div class="login-box">
+            <div class="login-header">
+                <header>Register</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field-name" id="FirstName" placeholder="First Name" autocomplete="off" required>
+                <input type="text" class="input-field-name" id="LastName" placeholder="Last Name" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+                <input type="file" class="upload-field" id="imageInput" name="image" accept="image/*"/ required>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field-OTP" id="CodeOTP" placeholder="Enter your OTP Code" autocomplete="off" required>
+                <button class="otp-btn" id="otp">Send</button>
+            </div>
+            <div class="input-submit">
+                <button class="submit-btn" id="submit"></button>
+                <label for="submit">Submit</label>
+            </div>
+        </div>
+    </form>
+    <!-- JS -->
+    <script src="JS/signUp.js"></script>
+    <!-- JS -->
+</body>
+</html>
