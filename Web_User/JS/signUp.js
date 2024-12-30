@@ -8,11 +8,11 @@ function generateOTP() {
 let otp_code = 0;
 // Attemps to enter OTP Code
 let attempts = 0; 
+const to_Email = 'ledangkhoagg@gmail.com';
 
 send_otp.addEventListener('click', function(e)
 {   e.preventDefault();
     const random_number = generateOTP();
-    const to_Email = 'dangkhoa123.2004@gmail.com';
     emailjs.send("service_r39cr7m","template_p8ez63k",{
         message: random_number.toString(),
         to_Email: to_Email,
@@ -48,18 +48,18 @@ sign_up.addEventListener('submit', function (e)
             body: file,
         }).then(response => {
             alert("File uploaded successfully!");
+            location.reload();
         }).catch(error => {
             alert("Error uploading file:", error);
         });
         attempts = 0;
-        location.reload();
     }
     else
     {
         attempts++;
         if (attempts >= 5) {
             emailjs.send("service_r39cr7m","template_4oh0buj",{
-                to_email: "dangkhoa123.2004@gmail.com",
+                to_email: to_Email,
             }).then(response => {
                 alert("Please ensure that you have the host's permission before registering.");
                 location.reload(); 
